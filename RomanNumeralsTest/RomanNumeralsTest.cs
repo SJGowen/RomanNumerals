@@ -1,4 +1,4 @@
-﻿using RomanNumerals;
+﻿using RomanNumeralsEngine;
 using Xunit;
 
 namespace RomanNumeralsTest
@@ -13,9 +13,9 @@ namespace RomanNumeralsTest
         [InlineData(5, "V")]
         public void Theory1To5Conversion(int arabic, string roman)
         {
-            var romanNumeralEngine = new RomanNumeralsEngine();
-            Assert.Equal(roman, romanNumeralEngine.Convert(arabic));
-            Assert.Equal(arabic, romanNumeralEngine.Convert(roman));
+            var engine = new RomanEngine();
+            Assert.Equal(roman, engine.Convert(arabic));
+            Assert.Equal(arabic, engine.Convert(roman));
         }
 
         [Theory]
@@ -28,9 +28,9 @@ namespace RomanNumeralsTest
         [InlineData(12, "XII")]
         public void Theory6To12Conversion(int arabic, string roman)
         {
-            var romanNumeralEngine = new RomanNumeralsEngine();
-            Assert.Equal(roman, romanNumeralEngine.Convert(arabic));
-            Assert.Equal(arabic, romanNumeralEngine.Convert(roman));
+            var engine = new RomanEngine();
+            Assert.Equal(roman, engine.Convert(arabic));
+            Assert.Equal(arabic, engine.Convert(roman));
         }
 
         [Theory]
@@ -47,18 +47,18 @@ namespace RomanNumeralsTest
         [InlineData(3472618, "M^M^M^C^D^L^X^X^MMDCXVIII")]
         public void TheoryRandomConversion(int arabic, string roman)
         {
-            var romanNumeralEngine = new RomanNumeralsEngine();
-            roman = roman.Replace("^", RomanNumeralsEngine.Macron);
-            Assert.Equal(roman, romanNumeralEngine.Convert(arabic));
-            Assert.Equal(arabic, romanNumeralEngine.Convert(roman));
+            var engine = new RomanEngine();
+            roman = roman.Replace("^", RomanEngine.Macron);
+            Assert.Equal(roman, engine.Convert(arabic));
+            Assert.Equal(arabic, engine.Convert(roman));
         }
 
         [Theory]
         [InlineData(0, "MLXVAIII")]
         public void TheoryErrorConversion(int arabic, string roman)
         {
-            var romanNumeralEngine = new RomanNumeralsEngine();
-            Assert.Equal(arabic, romanNumeralEngine.Convert(roman));
+            var engine = new RomanEngine();
+            Assert.Equal(arabic, engine.Convert(roman));
         }
     }
 }

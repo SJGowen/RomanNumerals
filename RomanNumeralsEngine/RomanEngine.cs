@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace RomanNumerals
+namespace RomanNumeralsEngine
 {
-    public class RomanNumeralsEngine
+    public class RomanEngine
     {
         public static string Macron { get; } = "\u0304";
 

@@ -1,4 +1,4 @@
-﻿using RomanNumerals;
+﻿using RomanNumeralsEngine;
 using System;
 
 namespace RomanNumeralsPrompt
@@ -7,7 +7,7 @@ namespace RomanNumeralsPrompt
     {
         static void Main(string[] args)
         {
-            var engine = new RomanNumeralsEngine();
+            var engine = new RomanEngine();
             Console.WriteLine("I convert Decimals to Roman Numerals and vice versa.");
             Console.Write("Enter one or the other: ");
             var input = Console.ReadLine();
