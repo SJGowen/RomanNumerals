@@ -71,6 +71,24 @@ namespace RomanNumeralsEngine
                     toConvert -= romanNumeralValue.ArabicNumber;
                 }
             }
+
+            //for (var i = 0; i < toConvert; i++)
+            //{
+            //    stringBuilder.Append("I");
+            //}
+
+            //stringBuilder.Replace("IIIII", "V")
+            //    .Replace("IIII", "IV")
+            //    .Replace("VV", "X")
+            //    .Replace("VIV", "IX")
+            //    .Replace("XXXXX", "L")
+            //    .Replace("XXXX", "XL")
+            //    .Replace("LL", "C")
+            //    .Replace("LXL", "XC")
+            //    .Replace("CCCCC", "D")
+            //    .Replace("CCCC", "CD")
+            //    .Replace("DD", "M")
+            //    .Replace("DCD", "CM");
         }
 
         public int Convert(string toConvert)
